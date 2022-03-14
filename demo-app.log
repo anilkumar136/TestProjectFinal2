@@ -1,21 +1,834 @@
-2022-03-13 23:10:50.594  INFO 34304 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 34304 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
-2022-03-13 23:10:50.600  INFO 34304 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
-2022-03-13 23:10:52.924  INFO 34304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2022-03-13 23:10:53.074  INFO 34304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 1 MongoDB repository interfaces.
-2022-03-13 23:10:54.306  INFO 34304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-03-13 23:10:54.327  INFO 34304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-13 23:10:54.332  INFO 34304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
-2022-03-13 23:10:54.608  INFO 34304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-13 23:10:54.609  INFO 34304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3940 ms
-2022-03-13 23:10:54.943  INFO 34304 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
-2022-03-13 23:10:55.383  INFO 34304 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2022-03-13 23:10:55.585  INFO 34304 --- [cluster-rtt-ClusterId{value='622eb23f05fa8c501420d3f5', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:12}] to host.docker.internal:27017
-2022-03-13 23:10:55.585  INFO 34304 --- [cluster-ClusterId{value='622eb23f05fa8c501420d3f5', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:13}] to host.docker.internal:27017
-2022-03-13 23:10:55.596  INFO 34304 --- [cluster-ClusterId{value='622eb23f05fa8c501420d3f5', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=83298200}
-2022-03-13 23:10:57.894  INFO 34304 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-03-13 23:10:58.043  INFO 34304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-13 23:10:58.090  INFO 34304 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 8.321 seconds (JVM running for 11.06)
-2022-03-13 23:10:59.739  INFO 34304 --- [RMI TCP Connection(2)-192.168.1.152] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-13 23:10:59.741  INFO 34304 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-13 23:10:59.747  INFO 34304 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-03-13 23:10:59.902  INFO 34304 --- [RMI TCP Connection(1)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:14}] to host.docker.internal:27017
+2022-03-14 09:32:38.344  INFO 2476 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 2476 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 09:32:38.358  INFO 2476 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 09:32:41.178  INFO 2476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 09:32:41.424  INFO 2476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 225 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 09:32:42.959  INFO 2476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 09:32:43.004  INFO 2476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 09:32:43.006  INFO 2476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 09:32:43.434  INFO 2476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 09:32:43.434  INFO 2476 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4977 ms
+2022-03-14 09:32:43.983  INFO 2476 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 09:32:44.508  INFO 2476 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 09:32:44.662  INFO 2476 --- [cluster-rtt-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:21}] to host.docker.internal:27017
+2022-03-14 09:32:44.664  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:20}] to host.docker.internal:27017
+2022-03-14 09:32:44.667  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=36401600}
+2022-03-14 09:32:45.398  WARN 2476 --- [main] n.s.ehcache.config.ConfigurationFactory  : No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/C:/Users/V5700111/.m2/repository/net/sf/ehcache/ehcache/2.10.9.2/ehcache-2.10.9.2.jar!/ehcache-failsafe.xml
+2022-03-14 09:32:47.483  INFO 2476 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 09:32:47.653  INFO 2476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 09:32:47.714  INFO 2476 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 10.288 seconds (JVM running for 13.599)
+2022-03-14 09:32:50.558  INFO 2476 --- [RMI TCP Connection(2)-192.168.1.152] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 09:32:50.559  INFO 2476 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 09:32:50.562  INFO 2476 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-14 09:32:50.629  INFO 2476 --- [RMI TCP Connection(3)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:22}] to host.docker.internal:27017
+2022-03-14 09:32:54.254  INFO 2476 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 09:32:54.254  INFO 2476 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 09:32:54.349  INFO 2476 --- [http-nio-8080-exec-1] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 09:32:54.891  INFO 2476 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Response :application/json
+2022-03-14 09:32:54.892  INFO 2476 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Committing a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:19:54.320  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server host.docker.internal:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method) ~[na:na]
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.2.jar:na]
+	... 5 common frames omitted
+
+2022-03-14 10:19:54.634  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:23}] to host.docker.internal:27017
+2022-03-14 10:19:54.634  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=239520300}
+2022-03-14 10:37:50.120  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server host.docker.internal:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:701) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:579) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:415) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:374) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:216) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method) ~[na:na]
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168) ~[na:na]
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:718) ~[mongodb-driver-core-4.4.2.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:576) ~[mongodb-driver-core-4.4.2.jar:na]
+	... 5 common frames omitted
+
+2022-03-14 10:37:50.425  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:26}] to host.docker.internal:27017
+2022-03-14 10:37:50.429  INFO 2476 --- [cluster-ClusterId{value='622f43fc7612816e3b5fcb31', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=290156700}
+2022-03-14 10:49:11.024  INFO 27556 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 27556 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:49:11.032  INFO 27556 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:49:12.716 ERROR 27556 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:18) ~[classes/:na]
+Caused by: java.lang.TypeNotPresentException: Type net.sf.ehcache.CacheManager not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:502) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:450) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$FactoryBeanMethodTypeFinder.doWith(AbstractAutowireCapableBeanFactory.java:2016) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:367) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBeanFromMethod(AbstractAutowireCapableBeanFactory.java:951) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:890) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:637) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:583) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.CacheManager
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 40 common frames omitted
+
+2022-03-14 10:49:12.723  WARN 27556 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.TypeNotPresentException: Type net.sf.ehcache.CacheManager not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:502) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:450) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$FactoryBeanMethodTypeFinder.doWith(AbstractAutowireCapableBeanFactory.java:2016) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:367) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBeanFromMethod(AbstractAutowireCapableBeanFactory.java:951) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:890) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:637) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:583) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1300) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:873) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:861) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:848) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:788) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:18) ~[classes/:na]
+Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.CacheManager
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 28 common frames omitted
+
+2022-03-14 10:49:48.272  INFO 20972 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 20972 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:49:48.277  INFO 20972 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:49:49.950 ERROR 20972 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:18) ~[classes/:na]
+Caused by: java.lang.TypeNotPresentException: Type net.sf.ehcache.CacheManager not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:502) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:450) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$FactoryBeanMethodTypeFinder.doWith(AbstractAutowireCapableBeanFactory.java:2016) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:367) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBeanFromMethod(AbstractAutowireCapableBeanFactory.java:951) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:890) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:637) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:583) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	... 17 common frames omitted
+Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.CacheManager
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 40 common frames omitted
+
+2022-03-14 10:49:49.973  WARN 20972 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.TypeNotPresentException: Type net.sf.ehcache.CacheManager not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:502) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:450) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$FactoryBeanMethodTypeFinder.doWith(AbstractAutowireCapableBeanFactory.java:2016) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:367) ~[spring-core-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBeanFromMethod(AbstractAutowireCapableBeanFactory.java:951) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:890) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:637) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:583) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1300) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:873) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:861) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:848) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:788) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:18) ~[classes/:na]
+Caused by: java.lang.ClassNotFoundException: net.sf.ehcache.CacheManager
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 28 common frames omitted
+
+2022-03-14 10:50:03.620  INFO 30164 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 30164 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:50:03.626  INFO 30164 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:50:05.666  INFO 30164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:50:05.900  INFO 30164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:50:07.025  INFO 30164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:50:07.048  INFO 30164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:50:07.057  INFO 30164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:50:07.444  INFO 30164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:50:07.446  INFO 30164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3750 ms
+2022-03-14 10:50:07.802  INFO 30164 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:50:08.100  INFO 30164 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:50:08.220  INFO 30164 --- [cluster-ClusterId{value='622f56201fc6442e5f4537b1', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:30}] to host.docker.internal:27017
+2022-03-14 10:50:08.220  INFO 30164 --- [cluster-rtt-ClusterId{value='622f56201fc6442e5f4537b1', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:29}] to host.docker.internal:27017
+2022-03-14 10:50:08.225  INFO 30164 --- [cluster-ClusterId{value='622f56201fc6442e5f4537b1', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=41609900}
+2022-03-14 10:50:10.568  INFO 30164 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 10:50:10.755  INFO 30164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 10:50:10.791  INFO 30164 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 7.987 seconds (JVM running for 10.452)
+2022-03-14 10:50:11.328  INFO 30164 --- [RMI TCP Connection(3)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:31}] to host.docker.internal:27017
+2022-03-14 10:50:13.788  INFO 30164 --- [RMI TCP Connection(5)-192.168.1.152] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 10:50:13.790  INFO 30164 --- [RMI TCP Connection(5)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 10:50:13.795  INFO 30164 --- [RMI TCP Connection(5)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-14 10:50:17.278  INFO 30164 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:50:17.283  INFO 30164 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 10:50:17.477  INFO 30164 --- [http-nio-8080-exec-1] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 10:50:17.908  INFO 30164 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Response :application/json
+2022-03-14 10:50:17.908  INFO 30164 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Committing a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:51:40.153  INFO 19184 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 19184 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:51:40.158  INFO 19184 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:51:42.243  INFO 19184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:51:42.439  INFO 19184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:51:43.462  INFO 19184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:51:43.477  INFO 19184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:51:43.478  INFO 19184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:51:43.706  INFO 19184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:51:43.706  INFO 19184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3459 ms
+2022-03-14 10:51:44.093  INFO 19184 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:51:44.359  INFO 19184 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:51:44.553  INFO 19184 --- [cluster-ClusterId{value='622f56803cedb078db08a152', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:32}] to host.docker.internal:27017
+2022-03-14 10:51:44.553  INFO 19184 --- [cluster-rtt-ClusterId{value='622f56803cedb078db08a152', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:33}] to host.docker.internal:27017
+2022-03-14 10:51:44.560  INFO 19184 --- [cluster-ClusterId{value='622f56803cedb078db08a152', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=72235300}
+2022-03-14 10:51:46.528  INFO 19184 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 10:51:46.640  INFO 19184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 10:51:46.657  INFO 19184 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 7.401 seconds (JVM running for 9.708)
+2022-03-14 10:51:48.222  INFO 19184 --- [RMI TCP Connection(1)-192.168.1.152] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 10:51:48.224  INFO 19184 --- [RMI TCP Connection(1)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 10:51:48.229  INFO 19184 --- [RMI TCP Connection(1)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-03-14 10:51:48.360  INFO 19184 --- [RMI TCP Connection(2)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:34}] to host.docker.internal:27017
+2022-03-14 10:51:55.467  INFO 19184 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:51:55.470  INFO 19184 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 10:51:55.539  INFO 19184 --- [http-nio-8080-exec-1] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 10:51:55.769  INFO 19184 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Response :application/json
+2022-03-14 10:51:55.771  INFO 19184 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Committing a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:52:57.759  INFO 19768 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 19768 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:52:57.762  INFO 19768 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:53:00.005  INFO 19768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:53:00.220  INFO 19768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 198 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:53:01.625  INFO 19768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:53:01.653  INFO 19768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:53:01.663  INFO 19768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:53:01.931  INFO 19768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:53:01.933  INFO 19768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4099 ms
+2022-03-14 10:53:02.400  INFO 19768 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:53:02.732  INFO 19768 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:53:02.879  INFO 19768 --- [cluster-rtt-ClusterId{value='622f56ce53e4656d411476ee', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:35}] to host.docker.internal:27017
+2022-03-14 10:53:02.881  INFO 19768 --- [cluster-ClusterId{value='622f56ce53e4656d411476ee', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:36}] to host.docker.internal:27017
+2022-03-14 10:53:02.885  INFO 19768 --- [cluster-ClusterId{value='622f56ce53e4656d411476ee', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=37863100}
+2022-03-14 10:53:06.494  INFO 19768 --- [main] .e.s.o.t.o.p.UpfrontAllocatingPageSource : Allocating 10.0MB in chunks
+2022-03-14 10:53:06.602  INFO 19768 --- [main] org.ehcache.core.EhcacheManager          : Cache 'player' created in EhcacheManager.
+2022-03-14 10:53:06.731  INFO 19768 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 10:53:06.746  INFO 19768 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 10:53:07.593  INFO 19768 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 10:53:07.819  INFO 19768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 10:53:07.908  INFO 19768 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 10.911 seconds (JVM running for 13.505)
+2022-03-14 10:53:08.766  INFO 19768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 10:53:08.768  INFO 19768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 10:53:08.773  INFO 19768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-14 10:53:08.799  INFO 19768 --- [http-nio-8080-exec-1] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:53:08.804  INFO 19768 --- [http-nio-8080-exec-1] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 10:53:08.959  INFO 19768 --- [http-nio-8080-exec-1] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 10:53:09.103 ERROR 19768 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: Invalid key type, expected : java.lang.Long but was : org.springframework.cache.interceptor.SimpleKey] with root cause
+
+java.lang.ClassCastException: Invalid key type, expected : java.lang.Long but was : org.springframework.cache.interceptor.SimpleKey
+	at org.ehcache.impl.store.BaseStore.checkKey(BaseStore.java:64) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.AbstractOffHeapStore.getAndFault(AbstractOffHeapStore.java:820) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.tiering.TieredStore.lambda$get$0(TieredStore.java:89) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.heap.OnHeapStore.lambda$getOrComputeIfAbsent$12(OnHeapStore.java:703) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.heap.OnHeapStore$Fault.getValueHolder(OnHeapStore.java:1017) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.heap.OnHeapStore$Fault.access$300(OnHeapStore.java:990) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.heap.OnHeapStore.resolveFault(OnHeapStore.java:768) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.heap.OnHeapStore.getOrComputeIfAbsent(OnHeapStore.java:707) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.tiering.TieredStore.get(TieredStore.java:87) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.core.Ehcache.doGet(Ehcache.java:90) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.core.EhcacheBase.get(EhcacheBase.java:127) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.Eh107Cache.get(Eh107Cache.java:90) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.springframework.cache.jcache.JCacheCache.lookup(JCacheCache.java:79) ~[spring-context-support-5.3.16.jar:5.3.16]
+	at org.springframework.cache.support.AbstractValueAdaptingCache.get(AbstractValueAdaptingCache.java:58) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doGet(AbstractCacheInvoker.java:73) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.findInCaches(CacheAspectSupport.java:571) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.findCachedItem(CacheAspectSupport.java:536) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:402) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.example.demo.service.PlayerServiceImpl$$EnhancerBySpringCGLIB$$b322cc79.getPlayerByPage(<generated>) ~[classes/:na]
+	at com.example.demo.controller.PlayerController.getPlayerPage(PlayerController.java:101) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:106) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at com.example.demo.filter.RequestResponseLoggingFilter.doFilter(RequestResponseLoggingFilter.java:24) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at com.example.demo.filter.TestFilter.doFilter(TestFilter.java:33) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.4.jar:2.6.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2022-03-14 10:53:10.487  INFO 19768 --- [RMI TCP Connection(1)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:37}] to host.docker.internal:27017
+2022-03-14 10:54:11.645  INFO 33488 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 33488 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:54:11.651  INFO 33488 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:54:13.761  INFO 33488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:54:13.918  INFO 33488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:54:15.207  INFO 33488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:54:15.223  INFO 33488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:54:15.235  INFO 33488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:54:15.539  INFO 33488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:54:15.545  INFO 33488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3802 ms
+2022-03-14 10:54:15.907  INFO 33488 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:54:16.227  INFO 33488 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:54:16.362  INFO 33488 --- [cluster-rtt-ClusterId{value='622f57189e79741f7fbaef6d', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:38}] to host.docker.internal:27017
+2022-03-14 10:54:16.362  INFO 33488 --- [cluster-ClusterId{value='622f57189e79741f7fbaef6d', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:39}] to host.docker.internal:27017
+2022-03-14 10:54:16.368  INFO 33488 --- [cluster-ClusterId{value='622f57189e79741f7fbaef6d', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=47720800}
+2022-03-14 10:54:19.693  INFO 33488 --- [main] .e.s.o.t.o.p.UpfrontAllocatingPageSource : Allocating 10.0MB in chunks
+2022-03-14 10:54:19.747  INFO 33488 --- [main] org.ehcache.core.EhcacheManager          : Cache 'player' created in EhcacheManager.
+2022-03-14 10:54:19.790  INFO 33488 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 10:54:19.811  INFO 33488 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 10:54:20.328  INFO 33488 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 10:54:20.529  INFO 33488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 10:54:20.590  INFO 33488 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 9.845 seconds (JVM running for 12.385)
+2022-03-14 10:54:23.504  INFO 33488 --- [RMI TCP Connection(2)-192.168.1.152] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 10:54:23.506  INFO 33488 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 10:54:23.513  INFO 33488 --- [RMI TCP Connection(2)-192.168.1.152] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-03-14 10:54:23.624  INFO 33488 --- [RMI TCP Connection(3)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:40}] to host.docker.internal:27017
+2022-03-14 10:54:27.673  INFO 33488 --- [http-nio-8080-exec-2] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:54:27.679  INFO 33488 --- [http-nio-8080-exec-2] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 10:54:27.809  INFO 33488 --- [http-nio-8080-exec-2] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 10:54:28.336  INFO 33488 --- [http-nio-8080-exec-2] o.e.i.i.r.RobustResilienceStrategy       : Ehcache key SimpleKey [2,2] recovered from
+
+org.ehcache.spi.resilience.StoreAccessException: org.ehcache.spi.serialization.SerializerException: java.io.NotSerializableException: com.example.demo.domain.Player
+	at org.ehcache.core.exceptions.StorePassThroughException.handleException(StorePassThroughException.java:78) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.AbstractOffHeapStore.computeWithRetry(AbstractOffHeapStore.java:1046) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.AbstractOffHeapStore.put(AbstractOffHeapStore.java:250) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.tiering.TieredStore.put(TieredStore.java:107) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.core.Ehcache.doPut(Ehcache.java:94) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.core.EhcacheBase.put(EhcacheBase.java:189) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.Eh107Cache.put(Eh107Cache.java:175) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.springframework.cache.jcache.JCacheCache.put(JCacheCache.java:95) ~[spring-context-support-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:87) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:837) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:430) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.16.jar:5.3.16]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.16.jar:5.3.16]
+	at com.example.demo.service.PlayerServiceImpl$$EnhancerBySpringCGLIB$$45f1c386.getPlayerByPage(<generated>) ~[classes/:na]
+	at com.example.demo.controller.PlayerController.getPlayerPage(PlayerController.java:101) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.58.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.ShallowEtagHeaderFilter.doFilterInternal(ShallowEtagHeaderFilter.java:106) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at com.example.demo.filter.RequestResponseLoggingFilter.doFilter(RequestResponseLoggingFilter.java:24) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at com.example.demo.filter.TestFilter.doFilter(TestFilter.java:33) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.4.jar:2.6.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.ehcache.spi.serialization.SerializerException: java.io.NotSerializableException: com.example.demo.domain.Player
+	at org.ehcache.impl.serialization.PlainJavaSerializer.serialize(PlainJavaSerializer.java:51) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.portability.OffHeapValueHolderPortability.encode(OffHeapValueHolderPortability.java:52) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.portability.OffHeapValueHolderPortability.encode(OffHeapValueHolderPortability.java:32) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.storage.PortabilityBasedStorageEngine.writeMapping(PortabilityBasedStorageEngine.java:64) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.OffHeapHashMap.tryWriteEntry(OffHeapHashMap.java:692) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.OffHeapHashMap.writeEntry(OffHeapHashMap.java:676) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.OffHeapHashMap.computeWithMetadata(OffHeapHashMap.java:1944) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.AbstractLockedOffHeapHashMap.computeWithMetadata(AbstractLockedOffHeapHashMap.java:520) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.shadow.org.terracotta.offheapstore.concurrent.AbstractConcurrentOffHeapMap.computeWithMetadata(AbstractConcurrentOffHeapMap.java:725) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.EhcacheConcurrentOffHeapClockCache.compute(EhcacheConcurrentOffHeapClockCache.java:152) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.impl.internal.store.offheap.AbstractOffHeapStore.computeWithRetry(AbstractOffHeapStore.java:1031) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 80 common frames omitted
+Caused by: java.io.NotSerializableException: com.example.demo.domain.Player
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1185) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349) ~[na:na]
+	at java.base/java.util.ArrayList.writeObject(ArrayList.java:897) ~[na:na]
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor66.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1145) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1497) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1433) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1179) ~[na:na]
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:349) ~[na:na]
+	at org.ehcache.impl.serialization.PlainJavaSerializer.serialize(PlainJavaSerializer.java:49) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 90 common frames omitted
+
+2022-03-14 10:54:28.432  INFO 33488 --- [http-nio-8080-exec-2] c.e.d.f.RequestResponseLoggingFilter     : Logging Response :application/json
+2022-03-14 10:54:28.434  INFO 33488 --- [http-nio-8080-exec-2] com.example.demo.filter.TestFilter       : Committing a transaction for req : /api/players/getPlayerPage
+2022-03-14 10:56:56.709  INFO 9900 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 9900 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:56:56.713  INFO 9900 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:56:59.038  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:56:59.206  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:57:00.615  INFO 9900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:57:00.664  INFO 9900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:57:00.667  INFO 9900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:57:00.877  INFO 9900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:57:00.878  INFO 9900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4092 ms
+2022-03-14 10:57:01.417  INFO 9900 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:57:01.907  INFO 9900 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:57:02.015  INFO 9900 --- [cluster-rtt-ClusterId{value='622f57bd01a2f375c2189dd4', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:41}] to host.docker.internal:27017
+2022-03-14 10:57:02.019  INFO 9900 --- [cluster-ClusterId{value='622f57bd01a2f375c2189dd4', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:42}] to host.docker.internal:27017
+2022-03-14 10:57:02.028  INFO 9900 --- [cluster-ClusterId{value='622f57bd01a2f375c2189dd4', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=46008300}
+2022-03-14 10:57:04.601  WARN 9900 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+2022-03-14 10:57:04.636  INFO 9900 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-14 10:57:04.689  INFO 9900 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-14 10:57:04.763 ERROR 9900 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:20) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 33 common frames omitted
+Caused by: javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.ehcache.jsr107.EhcacheCachingProvider$ConfigSupplier.getConfiguration(EhcacheCachingProvider.java:331) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider.getCacheManager(EhcacheCachingProvider.java:134) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider.getCacheManager(EhcacheCachingProvider.java:85) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.createCacheManager(JCacheCacheConfiguration.java:101) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.jCacheCacheManager(JCacheCacheConfiguration.java:83) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 34 common frames omitted
+Caused by: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:124) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:90) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider$ConfigSupplier.getConfiguration(EhcacheCachingProvider.java:328) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 43 common frames omitted
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.3: Element 'cache' cannot have character [children], because the type's content type is element-only.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidComplexType(XMLSchemaValidator.java:3472) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidType(XMLSchemaValidator.java:3432) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processElementContent(XMLSchemaValidator.java:3334) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleEndElement(XMLSchemaValidator.java:2372) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.endElement(XMLSchemaValidator.java:943) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1718) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2883) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339) ~[na:na]
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178) ~[na:na]
+	at org.ehcache.xml.ConfigurationParser.uriToDocument(ConfigurationParser.java:284) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:115) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 45 common frames omitted
+
+2022-03-14 10:59:07.905  INFO 18056 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 18056 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 10:59:07.909  INFO 18056 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 10:59:09.962  INFO 18056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 10:59:10.118  INFO 18056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 10:59:11.219  INFO 18056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 10:59:11.249  INFO 18056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 10:59:11.251  INFO 18056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 10:59:11.639  INFO 18056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 10:59:11.641  INFO 18056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3660 ms
+2022-03-14 10:59:11.983  INFO 18056 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 10:59:12.289  INFO 18056 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 10:59:12.490  INFO 18056 --- [cluster-ClusterId{value='622f58403f67947e8e3f689f', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:44}] to host.docker.internal:27017
+2022-03-14 10:59:12.494  INFO 18056 --- [cluster-rtt-ClusterId{value='622f58403f67947e8e3f689f', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:43}] to host.docker.internal:27017
+2022-03-14 10:59:12.500  INFO 18056 --- [cluster-ClusterId{value='622f58403f67947e8e3f689f', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=75812400}
+2022-03-14 10:59:15.011  WARN 18056 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+2022-03-14 10:59:15.039  INFO 18056 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-14 10:59:15.114  INFO 18056 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-14 10:59:15.246 ERROR 18056 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Unsatisfied dependency expressed through method 'cacheManager' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.example.demo.DemoApplication.main(DemoApplication.java:20) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jCacheCacheManager' defined in class path resource [org/springframework/boot/autoconfigure/cache/JCacheCacheConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.cache.CacheManager]: Factory method 'jCacheCacheManager' threw exception; nested exception is javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 33 common frames omitted
+Caused by: javax.cache.CacheException: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.ehcache.jsr107.EhcacheCachingProvider$ConfigSupplier.getConfiguration(EhcacheCachingProvider.java:331) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider.getCacheManager(EhcacheCachingProvider.java:134) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider.getCacheManager(EhcacheCachingProvider.java:85) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.createCacheManager(JCacheCacheConfiguration.java:101) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration.jCacheCacheManager(JCacheCacheConfiguration.java:83) ~[spring-boot-autoconfigure-2.6.4.jar:2.6.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 34 common frames omitted
+Caused by: org.ehcache.xml.exceptions.XmlConfigurationException: Error parsing XML configuration at file:/C:/Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:124) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:90) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.jsr107.EhcacheCachingProvider$ConfigSupplier.getConfiguration(EhcacheCachingProvider.java:328) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 43 common frames omitted
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.2.3: Element 'cache' cannot have character [children], because the type's content type is element-only.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:511) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3587) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidComplexType(XMLSchemaValidator.java:3472) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.elementLocallyValidType(XMLSchemaValidator.java:3432) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processElementContent(XMLSchemaValidator.java:3334) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleEndElement(XMLSchemaValidator.java:2372) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.endElement(XMLSchemaValidator.java:943) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1718) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2883) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339) ~[na:na]
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178) ~[na:na]
+	at org.ehcache.xml.ConfigurationParser.uriToDocument(ConfigurationParser.java:284) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	at org.ehcache.xml.XmlConfiguration.<init>(XmlConfiguration.java:115) ~[ehcache-3.8.1.jar:3.8.1 a19322e8d4b3f7157e878112c2afc0b6e3090fdd]
+	... 45 common frames omitted
+
+2022-03-14 11:00:02.374  INFO 25692 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 11.0.8-internal on RFNY137 with PID 25692 (C:\Users\V5700111\IdeaProjects\TestProjectFinal2\target\classes started by V5700111 in C:\Users\V5700111\IdeaProjects\TestProjectFinal2)
+2022-03-14 11:00:02.378  INFO 25692 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-03-14 11:00:04.556  INFO 25692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-14 11:00:04.728  INFO 25692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 1 MongoDB repository interfaces.
+2022-03-14 11:00:05.875  INFO 25692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-14 11:00:05.900  INFO 25692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-14 11:00:05.901  INFO 25692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-14 11:00:06.105  INFO 25692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-14 11:00:06.106  INFO 25692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3656 ms
+2022-03-14 11:00:06.571  INFO 25692 --- [main] o.s.boot.web.servlet.RegistrationBean    : Filter requestResponseLoggingFilter was not registered (possibly already registered?)
+2022-03-14 11:00:06.937  INFO 25692 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[host.docker.internal:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-03-14 11:00:07.126  INFO 25692 --- [cluster-ClusterId{value='622f5876bfad64639600f0e6', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46}] to host.docker.internal:27017
+2022-03-14 11:00:07.129  INFO 25692 --- [cluster-rtt-ClusterId{value='622f5876bfad64639600f0e6', description='null'}-host.docker.internal:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:45}] to host.docker.internal:27017
+2022-03-14 11:00:07.135  INFO 25692 --- [cluster-ClusterId{value='622f5876bfad64639600f0e6', description='null'}-host.docker.internal:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=host.docker.internal:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=61806700}
+2022-03-14 11:00:09.899  INFO 25692 --- [main] .e.s.o.t.o.p.UpfrontAllocatingPageSource : Allocating 10.0MB in chunks
+2022-03-14 11:00:09.969  INFO 25692 --- [main] org.ehcache.core.EhcacheManager          : Cache 'player' created in EhcacheManager.
+2022-03-14 11:00:10.029  INFO 25692 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 11:00:10.035  INFO 25692 --- [main] org.ehcache.jsr107.Eh107CacheManager     : Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./C./Users/V5700111/IdeaProjects/TestProjectFinal2/target/classes/ehcache.xml,Cache=player
+2022-03-14 11:00:10.433  INFO 25692 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-14 11:00:10.596  INFO 25692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-14 11:00:10.667  INFO 25692 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 9.071 seconds (JVM running for 11.846)
+2022-03-14 11:00:14.254  INFO 25692 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-14 11:00:14.258  INFO 25692 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-14 11:00:14.260  INFO 25692 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-14 11:00:14.287  INFO 25692 --- [http-nio-8080-exec-2] com.example.demo.filter.TestFilter       : Starting a transaction for req : /api/players/getPlayerPage
+2022-03-14 11:00:14.287  INFO 25692 --- [http-nio-8080-exec-2] c.e.d.f.RequestResponseLoggingFilter     : Logging Request  GET : /api/players/getPlayerPage
+2022-03-14 11:00:14.454  INFO 25692 --- [http-nio-8080-exec-2] c.e.demo.controller.PlayerController     : Inside this endpoints
+2022-03-14 11:00:14.635  INFO 25692 --- [RMI TCP Connection(3)-192.168.1.152] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:47}] to host.docker.internal:27017
+2022-03-14 11:00:14.636  INFO 25692 --- [http-nio-8080-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:48}] to host.docker.internal:27017
+2022-03-14 11:00:15.118  INFO 25692 --- [http-nio-8080-exec-2] c.e.d.f.RequestResponseLoggingFilter     : Logging Response :application/json
+2022-03-14 11:00:15.118  INFO 25692 --- [http-nio-8080-exec-2] com.example.demo.filter.TestFilter       : Committing a transaction for req : /api/players/getPlayerPage
